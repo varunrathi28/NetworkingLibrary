@@ -12,6 +12,11 @@
 		8B668C64229E7B0E00F9B0CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B668C62229E7B0E00F9B0CC /* Main.storyboard */; };
 		8B668C66229E7B1000F9B0CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B668C65229E7B1000F9B0CC /* Assets.xcassets */; };
 		8B668C69229E7B1000F9B0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B668C67229E7B1000F9B0CC /* LaunchScreen.storyboard */; };
+		8B668C78229E7BA100F9B0CC /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B668C77229E7BA100F9B0CC /* EndPointType.swift */; };
+		8B668C7A229E7C5700F9B0CC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B668C79229E7C5700F9B0CC /* HTTPMethod.swift */; };
+		8B668C7C229E7CC600F9B0CC /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B668C7B229E7CC600F9B0CC /* HTTPTask.swift */; };
+		8B668C7E229E7DA800F9B0CC /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B668C7D229E7DA800F9B0CC /* ParameterEncoding.swift */; };
+		8B668C80229E7E9300F9B0CC /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B668C7F229E7E9300F9B0CC /* URLParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		8B668C65229E7B1000F9B0CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B668C68229E7B1000F9B0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B668C6A229E7B1000F9B0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B668C77229E7BA100F9B0CC /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		8B668C79229E7C5700F9B0CC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		8B668C7B229E7CC600F9B0CC /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		8B668C7D229E7DA800F9B0CC /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		8B668C7F229E7E9300F9B0CC /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 		8B668C5D229E7B0E00F9B0CC /* NetworkingLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				8B668C72229E7B6A00F9B0CC /* Networking */,
 				8B668C5E229E7B0E00F9B0CC /* AppDelegate.swift */,
 				8B668C60229E7B0E00F9B0CC /* ViewController.swift */,
 				8B668C62229E7B0E00F9B0CC /* Main.storyboard */,
@@ -62,6 +73,50 @@
 				8B668C6A229E7B1000F9B0CC /* Info.plist */,
 			);
 			path = NetworkingLibrary;
+			sourceTree = "<group>";
+		};
+		8B668C72229E7B6A00F9B0CC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8B668C73229E7B6A00F9B0CC /* Encoding */,
+				8B668C74229E7B6A00F9B0CC /* Manager */,
+				8B668C75229E7B6A00F9B0CC /* EndPoint */,
+				8B668C76229E7B6A00F9B0CC /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8B668C73229E7B6A00F9B0CC /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				8B668C7D229E7DA800F9B0CC /* ParameterEncoding.swift */,
+				8B668C7F229E7E9300F9B0CC /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		8B668C74229E7B6A00F9B0CC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8B668C75229E7B6A00F9B0CC /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		8B668C76229E7B6A00F9B0CC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8B668C77229E7BA100F9B0CC /* EndPointType.swift */,
+				8B668C79229E7C5700F9B0CC /* HTTPMethod.swift */,
+				8B668C7B229E7CC600F9B0CC /* HTTPTask.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B668C7E229E7DA800F9B0CC /* ParameterEncoding.swift in Sources */,
+				8B668C7A229E7C5700F9B0CC /* HTTPMethod.swift in Sources */,
+				8B668C7C229E7CC600F9B0CC /* HTTPTask.swift in Sources */,
 				8B668C61229E7B0E00F9B0CC /* ViewController.swift in Sources */,
+				8B668C80229E7E9300F9B0CC /* URLParameterEncoder.swift in Sources */,
 				8B668C5F229E7B0E00F9B0CC /* AppDelegate.swift in Sources */,
+				8B668C78229E7BA100F9B0CC /* EndPointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
